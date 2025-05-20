@@ -5,15 +5,22 @@
  */
 package ProyectoFinalProgramacion;
 
+import javax.persistence.Embeddable;
+
 /**
  *
  * @author usuario
  */
+@Embeddable
 public class Persona {
     protected String nombre;
 
     public Persona(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Persona() {
+
     }
 
     public String listarPersona() {

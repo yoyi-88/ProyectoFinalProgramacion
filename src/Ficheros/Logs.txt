@@ -4,3 +4,4 @@ Usuarios registrados ProyectoFinalProgramacion.Usuario@46ee7fe8
 Usuarios registrados Alice a53e94e1-0857-4671-a541-97b061637437
 Usuarios registrados: Alice / Referencia: 4a2beec7-b315-4c67-bb50-c4d1aa63dca6
 Usuarios registrados: Alice / ID: 7cf48c33-2926-4c58-b9e6-c9c81d95a4a6
+Usuarios registrados: Alice / ID: 6ecf4cbb-70f9-4252-a293-ca9835749eb8

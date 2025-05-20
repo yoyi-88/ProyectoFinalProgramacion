@@ -7,13 +7,14 @@ package ProyectoFinalProgramacion;
 
 import ProyectoFinalProgramacion.utils.GestionFicheros;
 
+import java.io.*;
 import java.util.Scanner;
 
 /**
  *
  * @author usuario
  */
-public class Main {
+public class Main  {
 
     // El método main ahora propaga la excepción personalizada
     public static void main(String[] args) throws UsuarioNoEncontradoException {
@@ -119,6 +120,8 @@ public class Main {
         }
 
         scanner.close();
+
+
 
 
     }

@@ -9,9 +9,14 @@ package ProyectoFinalProgramacion;
  *
  * @author usuario
  */
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.*;
 import java.util.UUID;
 
-public class Usuario extends Persona {
+@Embeddable
+public class Usuario extends Persona implements Serializable {
     private String uuid;
     private String hashedContrasena;
 
@@ -19,6 +24,10 @@ public class Usuario extends Persona {
         super(nombre);
         this.uuid = UUID.randomUUID().toString();
         this.hashedContrasena = hashedContrasena;
+    }
+
+    public Usuario() {
+
     }
 
     public String getUuid() {
@@ -36,4 +45,6 @@ public class Usuario extends Persona {
     public String listarUsuario() {
         return listarPersona() + ", UUID: " + uuid + ", Contraseña (hashed): " + hashedContrasena;
     }
+
+
 }

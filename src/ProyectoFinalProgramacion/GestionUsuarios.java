@@ -1,6 +1,10 @@
 
 package ProyectoFinalProgramacion;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -9,7 +13,13 @@ import java.util.List;
  * Clase que gestiona una lista de usuarios con operaciones de inserción, borrado y lectura.
  * Incluye control de excepciones como parte de las buenas prácticas.
  */
+@Entity
 public class GestionUsuarios {
+    @Id
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="referenciaSeq")
+    //@SequenceGenerator(initialValue=10, allocationSize=10, name="referenciaSeq")
+    private Long id;
+    @ElementCollection
     private List<Usuario> usuariosLista;
 
     public GestionUsuarios() {
@@ -74,4 +84,6 @@ public class GestionUsuarios {
             System.err.println("Excepción capturada: " + e.getMessage());
         }
     }
+
+
 }
