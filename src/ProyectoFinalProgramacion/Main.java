@@ -27,8 +27,8 @@ public class Main  {
         String mensaje="Usuarios registrados: "+u1.nombre+" / ID: "+u1.getUuid();
 
         // Insertar usuarios iniciales
-        gestion.insertarUsuario(u1);
-        gestion.insertarUsuario(u2);
+        //gestion.insertarUsuario(u1);
+        //gestion.insertarUsuario(u2);
 
         // Menú de opciones
         int opcion = 0;
@@ -59,14 +59,16 @@ public class Main  {
                         try {
                             System.out.print("Ingrese nombre: ");
                             String nombre = scanner.nextLine();
+                            assert nombre.length() < 20 : "Debe contener menos de 20 caracteres";
+                            System.out.println("No puede contener mas de 20 caracteres "+ nombre);
                             if (nombre.isEmpty()) {
-                                throw new IllegalArgumentException("El nombre no puede estar vacío.");
+                                throw new CreacionUsuarioException("El nombre no puede estar vacío.");
                             }
 
                             System.out.print("Ingrese contraseña (mínimo 6 caracteres): ");
                             String contrasena = scanner.nextLine();
                             if (contrasena.length() < 6) {
-                                throw new IllegalArgumentException("La contraseña debe tener al menos 6 caracteres.");
+                                throw new CreacionUsuarioException("La contraseña debe tener al menos 6 caracteres.");
                             }
 
                             // En un caso real, aquí se aplicaría hash a la contraseña
@@ -74,8 +76,10 @@ public class Main  {
                             gestion.insertarUsuario(nuevoUsuario);
                             System.out.println("Usuario registrado con éxito.");
 
-                        } catch (IllegalArgumentException e) {
+                        } catch (IllegalArgumentException | AssertionError e) {
                             System.out.println("Error: " + e.getMessage());
+                        } catch (Exception e) { // ¿?
+                            throw new RuntimeException(e);
                         }
                         break;
 

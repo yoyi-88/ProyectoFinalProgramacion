@@ -21,8 +21,8 @@ public class Main3 {
         Usuario u3 = new Usuario("Paco", "abc123hashed");
         Usuario u4 = new Usuario("Seryi", "xyz456hashed");
 
-        gestion2.insertarUsuario(u3);
-        gestion2.insertarUsuario(u4);
+        //gestion2.insertarUsuario(u3);
+        //gestion2.insertarUsuario(u4);
 
         em.persist(gestion2);
 

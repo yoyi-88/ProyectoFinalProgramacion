@@ -6,3 +6,6 @@ Usuarios registrados: Alice / Referencia: 4a2beec7-b315-4c67-bb50-c4d1aa63dca6
 Usuarios registrados: Alice / ID: 7cf48c33-2926-4c58-b9e6-c9c81d95a4a6
 Usuarios registrados: Alice / ID: 6ecf4cbb-70f9-4252-a293-ca9835749eb8
 Usuarios registrados: Alice / ID: d5563af9-db2b-4ef7-a6c9-1ad238da5501
+Usuarios registrados: Alice / ID: c9e40784-7a3b-4dae-92dc-0f1f283c9131
+Usuarios registrados: Alice / ID: c9e40784-7a3b-4dae-92dc-0f1f283c9131
+Usuarios registrados: Alice / ID: d640bf1d-76a1-439c-8cb5-66f8f7e5d407

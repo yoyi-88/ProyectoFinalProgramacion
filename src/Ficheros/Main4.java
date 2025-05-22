@@ -24,7 +24,7 @@ public class Main4 {
                 int id = rs.getInt("id");
                 String Descripcion = rs.getString("Descripcion");
                 String NombreCorto = rs.getString("NombreCorto");
-                System.out.println("ID: " + id + ", Título: " + Descripcion + ", Autor: " + NombreCorto);
+                System.out.println("ID: " + id + ", Tarea: " + Descripcion + ", Nombre Corto: " + NombreCorto);
             }
             rs.close(); //Nuevo
             stmt.close();

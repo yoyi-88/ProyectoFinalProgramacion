@@ -27,12 +27,12 @@ public class GestionUsuarios {
     }
 
     // Inserta un usuario en la lista
-    public void insertarUsuario(Usuario usuario) {
+    public void insertarUsuario(Usuario usuario) throws Exception{
         usuariosLista.add(usuario);
     }
 
     // Borra un usuario por UUID con control de excepción
-    public void borrarUsuario(String uuid) {
+    public void borrarUsuario(String uuid) throws UsuarioNoEncontradoException {
         Iterator<Usuario> iterator = usuariosLista.iterator();
         boolean eliminado = false;
 
@@ -45,16 +45,11 @@ public class GestionUsuarios {
             }
         }
 
-        // Lanzamiento de una excepción personalizada si no se encuentra el usuario
         if (!eliminado) {
-            try {
-                throw new UsuarioNoEncontradoException("Usuario con UUID " + uuid + " no encontrado.");
-            } catch (UsuarioNoEncontradoException e) {
-                // Captura y gestión de la excepción
-                System.err.println("Error: " + e.getMessage());
-            }
+            throw new UsuarioNoEncontradoException("Usuario con UUID '" + uuid + "' no encontrado.");
         }
     }
+
 
     // Muestra todos los usuarios de la lista
     public void leerUsuario() {
